@@ -1,0 +1,58 @@
+{% extends "nz_health/base.html" %}
+ {% comment %} Comment {% endcomment %}
+{% block content %}
+    <h3>ADD NEW REFERRAL</h3>
+    
+    <form method="post" autocomplete="off" id="referral_form">
+        {% csrf_token %}
+        
+        {% comment %} {{ referral_form }} {% endcomment %}
+
+        <table id="referral_form">
+        <tr>
+          <td><button class='btn back'>
+        <a type="button" href="{% url 'referral_list' %}">Back to Referrals</a>
+        </button></td>    
+        </tr>
+        <tr>
+          <td>{{ referral_form.referrer.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ referral_form.referrer }}</td>
+        </tr>
+        <tr>
+          <td>{{ person_form.referrel_date.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ referral_form.referral_date }}</td>
+        </tr>
+        <tr>
+          <td>{{ referral_form.note.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ referral_form.note }}</td>
+        </tr>
+        <tr>
+          <td>{{ referral_form.person.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ referral_form.person }}</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <input type="submit" value="Submit" class="btn submit"/>
+            
+          </td>  
+        </tr>
+        
+      </table> 
+        
+        {% comment %} <div>
+        <button class='btn submit' type="submit" >Submit</button>
+        
+        </div> {% endcomment %}
+    </form>
+    
+
+{% endblock content %}

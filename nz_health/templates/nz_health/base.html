@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>NZ Health</title>
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="/static/logo.png" />
+    </header>
+    <nav>
+      <ul id="topnav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/person">Person</a></li>
+        <li><a href="/referrals">Referral</a></li>
+        {% if user.is_authenticated %}
+        <li><a class="login" href="/logout">Logout</a></li>
+        {% else %}
+        <li><a class="login" href="/login">Login</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+
+    <main>{% block content %} {% endblock content %}</main>
+    <footer>
+      <div id="botnav">
+        <p>&copy; NZ Health, 2021</p>
+      </div>
+    </footer>
+  </body>
+</html>

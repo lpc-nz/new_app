@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+img,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* END OF RESET */
+
+/* Layout */
+
+h3, h4 {
+  text-align: center;
+}
+
+#confirm-delete{
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.btn-login {
+  width: 5em;
+  height: 3em;
+}
+
+.btn {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  width: 5em;
+  height: 3em;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.person-details{
+  width: 78%;
+}
+
+
+aside {
+  text-align: center;
+  justify-items: center;
+}
+
+#position_form input,
+#referral_form input,
+#person_form input,
+#id_referrer,
+#id_username,
+#id_password {
+  height: 2.5rem;
+  width: 19em;
+  border-radius: 5px;
+  font-size: normal;
+}
+
+textarea {
+  border-radius: 5px;
+}
+
+/* Margins and padding */
+main {
+  min-height: 80vh;
+}
+header {
+  text-align: center;
+}
+footer{
+  margin-top: 3em;
+}
+
+#botnav {
+  margin-bottom: 1em;
+}
+
+h3, h2, h4 {
+  margin: 1em;
+}
+
+label {
+  margin: 0.6em 0;
+  font-weight: bold;
+}
+
+#homecontent button {
+  margin: 0.3em;
+  border-radius: 4px;
+}
+
+
+table {
+  margin: 0 auto;
+  
+}
+
+.add-person, .add-referral, .btn.back{
+  margin: 0 0 0.5em 0.5em;
+}
+
+#login, #person_form, #referral_form{
+  margin: auto;
+}
+
+.person-details{
+  margin: 1em auto;
+}
+
+td,
+th {
+  padding: 0.2em 0.1em;
+}
+
+ul {
+  padding: 1em;
+}
+
+form {
+  margin-top: 2em;
+}
+
+
+
+/* TYPOGRAPHY */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+button a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  
+}
+
+nav a {
+  font-size: 1em;
+
+}
+
+p {
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+th, td {
+  font-size: 0.7em;
+  font-style: normal;
+}
+
+.login-home{
+  text-decoration: underline;
+  color: #066011;
+  font-weight: bold;
+}
+
+/* COLOUR SCHEME & BORDERS */
+
+body {
+  background-color: #d9d9d9;
+}
+header,
+nav {
+  background-color: #e9c46a;
+}
+
+td,
+th {
+  border: 1px solid #868686;
+}
+
+.button.delete a {
+  color: rgb(186, 3, 3);
+}
+.button.details a {
+  color: rgb(0, 77, 66);
+}
+
+.button.edit a {
+  color: #684e0d;
+}
+
+.btn {
+  background-color: #4caf50;
+  border: none;
+}
+#login td,
+#login th,
+#person_form th,
+#person_form td,
+#referral_form th,
+#referral_form td {
+  border: 0px solid #868686;
+}
+.confirm-delete{
+  background-color: red;
+  color: aliceblue;
+}
+
+
+
+/* NAVIGATION */
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+a:hover {
+  color: #066011;
+}
+
+#homecontent button {
+  background-color: #e9c46a;
+}
+
+nav ul,
+footer ul {
+  list-style-type: none;
+}
+
+nav li {
+  padding: 0.5em 2em 0.5em 0;
+}
+
+/* IMAGES */
+
+img {
+  width: 100%;
+  
+}
+#logo {
+  margin-top: -3em;
+  margin-bottom: -5em;
+}
+
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 32em) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 30rem 1fr;
+  }
+
+  #logo {
+    width: 60%;
+    margin-top: -6em;
+    margin-bottom: -7em;
+  }
+
+  header,
+  footer,
+  nav, main {
+    grid-column: 1/4;
+  }
+
+  table {
+    margin: 0 auto;
+    width: 26em;
+  }
+  th, td {
+    font-size: 1em;
+    font-style: normal;
+  }
+  .add-person, .add-referral{
+    margin: 0 0 0.5em 5em;
+  }
+  .btn.back.referral{
+    margin-left: 4em;
+  }
+
+  #login{
+    margin-left: 13em;
+  }
+
+}
+
+
+
+/* RESPONSIVENESS */
+@media screen and (min-width: 42em) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 40rem 1fr;
+  }
+
+  header,
+  footer,
+  nav {
+    grid-column: 1/4;
+  }
+
+  main {
+    grid-column: 2/3;
+  }
+  #logo {
+    width: 60%;
+    margin-top: -6em;
+    margin-bottom: -7em;
+  }
+  .home-img{
+    width: 60%;
+  }
+
+  #homecontent,
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .home-img{
+    width: 40%;
+    margin: 0 12em;
+  }
+
+  .btn {
+    font-size: 1.1em;
+    margin: 4px 0;
+  }
+  
+  .nav-bar a {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  table {
+    align-items: center;
+    margin: 0 auto;
+    width: 40em;
+  }
+
+  th, td {
+    font-size: 1em;
+    font-style: normal;
+  }
+  .add-person{
+    margin: 0 0 0.5em 0;
+  }
+  .add-referral{
+    margin: 0 0 0.5em 0;
+  }
+
+}
+
+
+@media screen and (min-width: 62em) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 14rem 46em 1fr;
+  }
+  footer{
+    grid-column: 1/5;
+  }
+  header{
+    grid-column: 1/3;
+  }
+  nav{
+    grid-column: 3/5;
+
+  }
+
+  main {
+    grid-column: 2/4;
+    padding: 0 4em;
+  }
+
+  #logo{
+    grid-column: 2/3;
+    width: 40%;
+    margin: -1em 0 -1em 8em;
+  }
+
+  nav{
+    display: flex;
+    align-items: center; 
+  }
+
+  ul {
+    justify-content:flex-start;
+    /* margin-top: 2em;  */
+  }
+
+  .login{
+    padding-left: 20em;
+  }
+
+  .btn.login{
+    padding: 0;
+  }
+
+  .home-img{
+    margin: 0 5em;
+    float: left;
+  }
+
+  aside {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  #details-display{
+    display: flex;
+    
+  }
+  .person-details{
+    margin: 3em 0 0 0.5em;
+    width: 100%;
+  }
+
+  table{
+    width: 100%;
+    
+  }
+
+  .add-person, .add-referral{
+    margin: 0 0 0.5em 0em;
+  }
+  .btn.back.referral, .btn.back{
+    margin-left: 0;
+  }
+
+  .home-img{
+    margin: 0 12em;
+  }
+  nav a {
+    font-size: 1.2em;
+  
+  }
+
+  
+}

@@ -1,0 +1,50 @@
+{% extends "nz_health/base.html" %}
+ {% comment %} Comment {% endcomment %}
+ 
+{% block content %}
+    
+    <h3>ADD NEW PERSON</h3>
+    
+    <form method="post" autocomplete="off" >
+        {% csrf_token %}
+        
+        {% comment %} {{ person_form }} {% endcomment %}
+        
+        <table id="person_form">
+        <tr>
+          <td><button class='btn back'>
+        <a type="button" href="{% url 'person_list' %}">Back to List</a>
+        </button></td>    
+        </tr>
+        <tr>
+          <td>{{ person_form.first_name.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ person_form.first_name }}</td>
+        </tr>
+        <tr>
+          <td>{{ person_form.last_name.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ person_form.last_name }}</td>
+        </tr>
+        <tr>
+          <td>{{ person_form.date_of_birth.label_tag }}</td>    
+        </tr>
+        <tr>
+          <td>{{ person_form.date_of_birth }}</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <input type="submit" value="Submit" class="btn submit"/>
+            
+          </td>  
+        </tr>
+        
+      </table> 
+       
+    </form>
+  
+
+{% endblock content %}

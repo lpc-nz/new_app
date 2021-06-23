@@ -1,0 +1,12 @@
+{% extends "nz_health/base.html" %} {% block content %}
+<h3>Confirm Delete</h3>
+
+<h4>Are you sure you want to delete {{ person_delete }} ?</h4>
+
+<form id='confirm-delete' action="{% url 'person_delete' person_delete.id %}" method="POST">
+  {% csrf_token %}
+  <button><a href="/person">Cancel</a></button>
+  <button class='confirm-delete' type="submit" name="Confirm">DELETE</button>
+</form>
+
+{% endblock content %}
